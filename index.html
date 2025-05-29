@@ -1,164 +1,225 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>InfoFirstYearHeart</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InfoFirstYearHeart</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
-  body {
-    margin: 0;
-    height: 100vh;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    user-select: none;
-  }
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      user-select: none;
+    }
 
-  h1 {
-    margin: 0;
-    font-size: 3rem;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-  }
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
 
-  .heart-container {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
-  }
+    .heart-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      cursor: pointer;
+    }
 
-  .icon {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid #fff;
-    box-shadow: 0 0 8px rgba(255,255,255,0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #ccc;
-  }
+    .icon {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid #fff;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #ccc;
+    }
 
-  .icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
+    .icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
 
-  .icon:hover {
-    transform: scale(1.4);
-    box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.9);
-    z-index: 20;
-  }
-</style>
+    .icon:hover {
+      transform: scale(1.4);
+      box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.9);
+      z-index: 20;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>#InfoFirstYearHeart</h1>
+  <h1>#InfoFirstYearHeart</h1>
 
-<div class="heart-container" id="heart"></div>
+  <div class="heart-container" id="heart" title="Passe o mouse aqui para sentir a batida ❤️"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script>
-  const heart = document.getElementById('heart');
-  const numIcons = 30; 
-  const radius = 180;
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+    const heart = document.getElementById('heart');
+    const numIcons = 30;
+    const radius = 180;
 
-  const avatarUrls = [
-    'image217.jpg', 'image218.jpg', 'image219.jpg', 'image220.jpg', 'image221.jpg',
-    'image222.png', 'image223.png', 'image224.png', 'image225.jpg', 'image226.jpg',
-    'image227.jpg', 'image228.jpg', 'image229.jpg', 'image230.jpg', 'image231.jpg',
-    'image232.png', 'image233.jpg', 'image234.jpg', 'image235.jpg', 'image236.jpg',
-    'image237.png', 'image238.png', 'image239.jpg', 'image240.jpg', 'image241.jpg',
-    'image242.jpg', 'image243.png', 'image244.jpg', 'image245.png', 'image246.jpg',
-    'image247.jpg', 'image248.jpg', 'image249.jpg', 'image250.jpg', 'image251.jpg',
-    'image252.jpg', 'image253.jpg', 'image254.png', 'image256.jpg', 'image257.png',
-    'image258.jpg', 'image259.jpg'
-  ];
+    const avatarUrls = [
+      'image214.jpg',
+      'image215.jpg',
+      'image217.jpg',
+      'image218.jpg',
+      'image219.jpg',
+      'image220.jpg',
+      'image221.jpg',
+      'image225.jpg',
+      'image226.jpg',
+      'image227.jpg',
+      'image228.jpg',
+      'image229.jpg',
+      'image230.jpg',
+      'image231.jpg',
+      'image233.jpg',
+      'image234.jpg',
+      'image235.jpg',
+      'image236.jpg',
+      'image239.jpg',
+      'image240.jpg',
+      'image241.jpg',
+      'image242.jpg',
+      'image246.jpg',
+      'image247.jpg',
+      'image248.jpg',
+      'image249.jpg',
+      'image250.jpg',
+      'image251.jpg',
+      'image252.jpg',
+      'image253.jpg',
+      'image256.jpg',
+      'image258.jpg',
+      'image259.jpg',
+      'image261.jpg',
+      'image262.png',
+      'image263.jpg',
+      'image264.jpg',
+      'image265.jpg',
+      'image266.jpg',
+      'image267.jpg',
+      'image268.jpg',
+      'image269.jpg',
+      'image271.jpg',
+      'image272.jpg',
+      'image274.jpg',
+      'image275.jpg',
+      'image276.jpg',
+      'image277.jpg',
+      'image278.jpg',
+      'image280.jpg',
+      'image281.jpg',
+      'image282.jpg',
+      'image283.jpg',
+      'image284.jpg',
+      'image285.jpg',
+      'image288.jpg',
+      'image289.jpg',
+      'image290.jpg',
+      'image292.jpg',
+      'image293.jpg',
+      'image294.jpg',
+      'image295.jpg',
+      'image296.jpg',
+      'image297.jpg',
+      'image298.jpg',
+      'image299.jpg',
+      'image300.jpg',
+    ];
 
-  function heartFunction(t) {
-    const x = 16 * Math.pow(Math.sin(t), 3);
-    const y = 13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t);
-    return {x, y};
-  }
+    function heartFunction(t) {
+      const x = 16 * Math.pow(Math.sin(t), 3);
+      const y = 13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t);
+      return { x, y };
+    }
 
-  // Cria os ícones no contorno do coração
-  for (let i = 0; i < numIcons; i++) {
-    const t = Math.PI * 2 * (i / numIcons);
-    const pos = heartFunction(t);
-    const x = radius + pos.x * 10;
-    const y = radius - pos.y * 10;
+    // Cria os ícones no contorno do coração
+    for (let i = 0; i < numIcons; i++) {
+      const t = Math.PI * 2 * (i / numIcons);
+      const pos = heartFunction(t);
+      const x = radius + pos.x * 10;
+      const y = radius - pos.y * 10;
 
-    const icon = document.createElement('div');
-    icon.classList.add('icon');
-    const img = document.createElement('img');
-    img.src = `assets/image/${avatarUrls[i % avatarUrls.length]}`;
-    img.alt = `Avatar ${i + 1}`;
-    icon.appendChild(img);
+      const icon = document.createElement('div');
+      icon.classList.add('icon');
+      const img = document.createElement('img');
+      img.src = `assets/image/${avatarUrls[i % avatarUrls.length]}`;
+      img.alt = `Avatar ${i + 1}`;
+      icon.appendChild(img);
 
-    icon.style.left = `${x - 25}px`;
-    icon.style.top = `${y - 25}px`;
+      icon.style.left = `${x - 25}px`;
+      icon.style.top = `${y - 25}px`;
 
-    heart.appendChild(icon);
-  }
+      heart.appendChild(icon);
+    }
 
-  // Animação pulsante inicial suave
-  const pulseAnimation = anime({
-    targets: '.icon',
-    scale: [
-      { value: 1, duration: 1200 },
-      { value: 1.1, duration: 1200 },
-      { value: 1, duration: 1200 }
-    ],
-    delay: anime.stagger(80),
-    loop: true,
-    easing: 'easeInOutSine',
-    autoplay: true
-  });
-
-  // Cria uma timeline para batida do coração no container inteiro
-  const heartBeat = anime.timeline({
-    targets: '#heart',
-    autoplay: false,
-    easing: 'easeInOutSine'
-  });
-
-  heartBeat
-    .add({
-      scale: 1.1,
-      duration: 150,
-    })
-    .add({
-      scale: 1,
-      duration: 150,
-    })
-    .add({
-      scale: 1.05,
-      duration: 150,
-    })
-    .add({
-      scale: 1,
-      duration: 150,
+    // Animação pulsante inicial suave
+    const pulseAnimation = anime({
+      targets: '.icon',
+      scale: [
+        { value: 1, duration: 1200 },
+        { value: 1.1, duration: 1200 },
+        { value: 1, duration: 1200 }
+      ],
+      delay: anime.stagger(80),
+      loop: true,
+      easing: 'easeInOutSine',
+      autoplay: true
     });
 
-  // Ao passar o mouse no coração: dispara batida forte
-  heart.addEventListener('mouseenter', () => {
-    heartBeat.restart();
-  });
+    // Cria uma timeline para batida do coração no container inteiro
+    const heartBeat = anime.timeline({
+      targets: '#heart',
+      autoplay: false,
+      easing: 'easeInOutSine'
+    });
 
-  // Se quiser, para no mouse leave:
-  // heart.addEventListener('mouseleave', () => {
-  //   heartBeat.pause();
-  // });
-</script>
+    heartBeat
+      .add({
+        scale: 1.1,
+        duration: 150,
+      })
+      .add({
+        scale: 1,
+        duration: 150,
+      })
+      .add({
+        scale: 1.05,
+        duration: 150,
+      })
+      .add({
+        scale: 1,
+        duration: 150,
+      });
+
+    // Ao passar o mouse no coração: dispara batida forte
+    heart.addEventListener('mouseenter', () => {
+      heartBeat.restart();
+    });
+
+    // Se quiser, para no mouse leave:
+    // heart.addEventListener('mouseleave', () => {
+    //   heartBeat.pause();
+    // });
+  </script>
 
 </body>
+
 </html>
