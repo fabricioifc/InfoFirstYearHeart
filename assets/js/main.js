@@ -125,4 +125,4 @@ function updateRandomIcons() {
 }
 
 // Troca imagens a cada 3 segundos
-setInterval(updateRandomIcons, 3000);
+// setInterval(updateRandomIcons, 3000);
